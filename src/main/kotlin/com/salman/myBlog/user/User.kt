@@ -26,4 +26,8 @@ class User(id: Long = 0L,
     @Transient
     var age: Int = 0
         get() = Period.between(dob, LocalDate.now()).years
+
+    override fun toString(): String {
+        return "User(name='$name', email='$email', dob=$dob, id=$id, age=$age)"
+    }
 }
