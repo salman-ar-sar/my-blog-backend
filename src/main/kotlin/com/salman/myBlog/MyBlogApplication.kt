@@ -1,10 +1,12 @@
 package com.salman.myBlog
 
-import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration
 import org.springframework.boot.runApplication
+import org.springframework.context.annotation.ComponentScan
 
-@SpringBootApplication
-open class MyBlogApplication
+@EnableAutoConfiguration
+@ComponentScan
+class MyBlogApplication
 
 fun main(args: Array<String>) {
 	runApplication<MyBlogApplication>(*args)

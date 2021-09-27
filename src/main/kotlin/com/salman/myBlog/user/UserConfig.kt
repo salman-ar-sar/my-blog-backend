@@ -2,11 +2,11 @@ package com.salman.myBlog.user
 
 import org.springframework.boot.CommandLineRunner
 import org.springframework.context.annotation.Bean
-import org.springframework.context.annotation.Configuration
+import org.springframework.stereotype.Component
 import java.time.LocalDate
 import java.time.Month.*
 
-@Configuration
+@Component
 class UserConfig {
 
     @Bean
