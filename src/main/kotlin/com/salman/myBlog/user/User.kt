@@ -7,10 +7,15 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "users")
-class User(id: Long = 0L,
-           var name: String = "",
-           var email: String = "",
-           var dob: LocalDate = LocalDate.of(1900, Month.JANUARY, 1)) {
+class User(
+    id: Long = 0L,
+    var name: String = "",
+    var email: String = "",
+    var passwordHash: String = "",
+    var profilePhoto: String = "",
+    var followers: Int = 0,
+    var dob: LocalDate = LocalDate.of(1900, Month.JANUARY, 1)
+) {
     @Id
     @SequenceGenerator(
         name = "user_sequence",
