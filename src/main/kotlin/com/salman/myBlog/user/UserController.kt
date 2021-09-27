@@ -17,4 +17,9 @@ class UserController(private val userService: UserService) {
     fun registerUser(@RequestBody user: User) {
         userService.addUser(user)
     }
+
+    @DeleteMapping(path = ["{userId}"])
+    fun deleteUser(@PathVariable("userId") userId: Long) {
+        userService.deleteUser(userId)
+    }
 }
