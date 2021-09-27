@@ -7,4 +7,8 @@ class UserService(private val userRepository: UserRepository) {
     fun getUsers(): List<User> {
         return userRepository.findAll();
     }
+
+    fun addUser(user: User) {
+        println(user)
+    }
 }
