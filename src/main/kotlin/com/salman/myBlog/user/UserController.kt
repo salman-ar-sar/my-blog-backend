@@ -22,4 +22,12 @@ class UserController(private val userService: UserService) {
     fun deleteUser(@PathVariable("userId") userId: Long) {
         userService.deleteUser(userId)
     }
+
+    @PutMapping(path = ["{userId}"])
+    fun updateUser(
+            @PathVariable("userId") userId: Long,
+            @RequestParam(required = false) name: String?,
+            @RequestParam(required = false) email: String?) {
+        userService.updateUser(userId, name, email)
+    }
 }
