@@ -9,6 +9,10 @@ class UserService(private val userRepository: UserRepository) {
     }
 
     fun addUser(user: User) {
-        println(user)
+        val userByEmail = userRepository.findUserByEmail(user.email)
+        if (userByEmail.isPresent) {
+            throw IllegalStateException("Email taken!")
+        }
+        userRepository.save(user)
     }
 }
