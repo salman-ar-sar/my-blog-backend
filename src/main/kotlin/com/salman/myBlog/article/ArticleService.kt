@@ -26,8 +26,11 @@ class ArticleService(private val articleRepository: ArticleRepository) {
         val article = articleRepository.findById(articleId)
             .orElseThrow { IllegalStateException("Article with ID:$articleId doesn't exits") }
 
-        if (name != null && name.isNotEmpty() && name != user.name) {
-            user.name = name
+        if (name != null && name.isNotEmpty() && name != article.name) {
+            article.name = name
+        }
+        if (image != null && image.isNotEmpty() && image != article.image) {
+            article.image = image
         }
 
     }
