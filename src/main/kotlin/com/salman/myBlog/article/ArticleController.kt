@@ -12,7 +12,7 @@ class ArticleController(private val articleService: ArticleService) {
     }
 
     @PostMapping
-    fun registerArticle(@RequestBody article: Article) {
+    fun addArticle(@RequestBody article: Article) {
         articleService.addArticle(article)
     }
 
