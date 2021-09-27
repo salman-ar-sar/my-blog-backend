@@ -26,7 +26,7 @@ class UserService(private val userRepository: UserRepository) {
     }
 
     @Transactional
-    fun updateUser(userId: Long, name: String?, email: String?) {
+    fun updateUser(userId: Long, name: String?, email: String?, passwordHash: String?, profilePhoto: String?, followers: Int?) {
         val user = userRepository.findById(userId)
             .orElseThrow { IllegalStateException("User with ID:$userId doesn't exits") }
 
@@ -42,7 +42,14 @@ class UserService(private val userRepository: UserRepository) {
 
             user.email = email
         }
-
-
+        if (passwordHash != null && passwordHash.isNotEmpty() && passwordHash != user.passwordHash) {
+            user.passwordHash = passwordHash
+        }
+        if (profilePhoto != null && profilePhoto.isNotEmpty() && profilePhoto != user.profilePhoto) {
+            user.profilePhoto = profilePhoto
+        }
+        if (followers != null && followers != user.followers) {
+            user.followers = followers
+        }
     }
 }
