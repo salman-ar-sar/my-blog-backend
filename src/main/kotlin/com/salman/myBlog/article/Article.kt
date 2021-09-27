@@ -18,6 +18,7 @@ class Article(
     var title: String = "",
     var author: String = "",
     var content: String = "",
+    var image: String = "",
     var date: LocalDate = LocalDate.now()) {
 
     override fun toString(): String {
