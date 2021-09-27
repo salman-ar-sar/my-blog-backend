@@ -1,6 +1,13 @@
 # Blog Backend using Spring Boot and Kotlin
 
-This is the backend application for My Blog project using React.
+- This is the backend CRUD application for My Blog project using React.
+- Has two API endpoints for User and Article classes.
+
+## Dependencies Used
+
+- Spring Web
+- Spring Data JPA
+- PostgreSQL Driver
 
 ## Prerequisites
 
