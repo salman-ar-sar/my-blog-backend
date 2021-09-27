@@ -25,7 +25,10 @@ class UserController(private val userService: UserService) {
     fun updateUser(
             @PathVariable("userId") userId: Long,
             @RequestParam(required = false) name: String?,
+            @RequestParam(required = false) passwordHash: String?,
+            @RequestParam(required = false) profilePhoto: String?,
+            @RequestParam(required = false) followers: Int?,
             @RequestParam(required = false) email: String?) {
-        userService.updateUser(userId, name, email)
+        userService.updateUser(userId, name, email, passwordHash, profilePhoto, followers)
     }
 }
