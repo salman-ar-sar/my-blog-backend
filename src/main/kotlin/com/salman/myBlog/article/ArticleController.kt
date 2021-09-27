@@ -25,9 +25,7 @@ class ArticleController(private val articleService: ArticleService) {
     fun updateArticle(
             @PathVariable("articleId") articleId: Long,
             @RequestParam(required = false) name: String?,
-            @RequestParam(required = false) passwordHash: String?,
-            @RequestParam(required = false) profilePhoto: String?,
-            @RequestParam(required = false) email: String?) {
-        articleService.updateArticle(articleId, name, email, passwordHash, profilePhoto)
+            @RequestParam(required = false) image: String?) {
+        articleService.updateArticle(articleId, name, image)
     }
 }
