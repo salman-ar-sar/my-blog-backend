@@ -1,8 +1,6 @@
 package com.salman.myBlog.user
 
 import org.springframework.web.bind.annotation.*
-import java.time.LocalDate
-import java.time.Month
 
 @RestController
 @RequestMapping(path = ["api/v1/user"])
