@@ -1,6 +1,7 @@
 package com.salman.myBlog.user
 
 import org.springframework.stereotype.Service
+import javax.transaction.Transactional
 
 @Service
 class UserService(private val userRepository: UserRepository) {
@@ -22,5 +23,26 @@ class UserService(private val userRepository: UserRepository) {
             throw IllegalStateException("User with ID:$userId doesn't exits")
         }
         userRepository.deleteById(userId)
+    }
+
+    @Transactional
+    fun updateUser(userId: Long, name: String?, email: String?) {
+        val user = userRepository.findById(userId)
+            .orElseThrow { IllegalStateException("User with ID:$userId doesn't exits") }
+
+        if (name != null && name.isNotEmpty() && name != user.name) {
+            user.name = name
+        }
+
+        if (email != null && email.isNotEmpty() && email != user.email) {
+            val userByEmail = userRepository.findUserByEmail(email)
+            if (userByEmail.isPresent) {
+                throw IllegalStateException("Email taken!")
+            }
+
+            user.email = email
+        }
+
+
     }
 }
