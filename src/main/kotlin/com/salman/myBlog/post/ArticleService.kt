@@ -1,16 +1,16 @@
-package com.salman.myBlog.article
+package com.salman.myBlog.post
 
 import org.springframework.stereotype.Service
 import javax.transaction.Transactional
 
 @Service
 class ArticleService(private val articleRepository: ArticleRepository) {
-    fun getArticles(): List<Article> {
+    fun getArticles(): List<PostEntity> {
         return articleRepository.findAll()
     }
 
-    fun addArticle(article: Article) {
-        articleRepository.save(article)
+    fun addArticle(postEntity: PostEntity) {
+        articleRepository.save(postEntity)
     }
 
     fun deleteArticle(articleId: Long) {

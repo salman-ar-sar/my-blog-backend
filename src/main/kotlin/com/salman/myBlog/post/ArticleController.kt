@@ -1,4 +1,4 @@
-package com.salman.myBlog.article
+package com.salman.myBlog.post
 
 import org.springframework.web.bind.annotation.*
 
@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.*
 class ArticleController(private val articleService: ArticleService) {
 
     @GetMapping
-    fun getArticles(): List<Article> {
+    fun getArticles(): List<PostEntity> {
         return articleService.getArticles()
     }
 
     @PostMapping
-    fun addArticle(@RequestBody article: Article) {
-        articleService.addArticle(article)
+    fun addArticle(@RequestBody postEntity: PostEntity) {
+        articleService.addArticle(postEntity)
     }
 
     @DeleteMapping(path = ["{articleId}"])
