@@ -1,4 +1,4 @@
-package com.salman.myBlog.post
+package com.salman.myblog.post
 
 import org.springframework.web.bind.annotation.*
 

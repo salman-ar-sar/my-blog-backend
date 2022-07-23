@@ -1,7 +1,7 @@
-package com.salman.myBlog.user.helpers
+package com.salman.myblog.user.helpers
 
-import com.salman.myBlog.user.db.UserEntity
-import com.salman.myBlog.user.db.UserRepository
+import com.salman.myblog.user.db.UserEntity
+import com.salman.myblog.user.db.UserRepository
 import org.springframework.stereotype.Component
 
 @Component

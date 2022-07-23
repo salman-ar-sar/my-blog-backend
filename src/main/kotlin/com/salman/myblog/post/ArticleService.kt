@@ -1,4 +1,4 @@
-package com.salman.myBlog.post
+package com.salman.myblog.post
 
 import org.springframework.stereotype.Service
 import javax.transaction.Transactional

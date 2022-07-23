@@ -1,4 +1,4 @@
-package com.salman.myBlog
+package com.salman.myblog
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

@@ -1,12 +1,11 @@
-package com.salman.myBlog.user.service
+package com.salman.myblog.user.service
 
-import com.salman.myBlog.user.db.UserEntity
-import com.salman.myBlog.user.dto.UserDTO
-import com.salman.myBlog.user.dto.UserLoginDTO
-import com.salman.myBlog.user.dto.UserRequestDTO
-import com.salman.myBlog.user.helpers.UserServiceHelper
+import com.salman.myblog.user.db.UserEntity
+import com.salman.myblog.user.dto.UserDTO
+import com.salman.myblog.user.dto.UserLoginDTO
+import com.salman.myblog.user.dto.UserRequestDTO
+import com.salman.myblog.user.helpers.UserServiceHelper
 import org.springframework.stereotype.Service
-import javax.transaction.Transactional
 
 @Service
 class UserServiceImpl(private val helper: UserServiceHelper) : UserService {

@@ -1,4 +1,4 @@
-package com.salman.myBlog
+package com.salman.myblog
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration
 import org.springframework.boot.runApplication

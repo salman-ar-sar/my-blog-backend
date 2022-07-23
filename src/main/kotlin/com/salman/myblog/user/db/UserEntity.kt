@@ -1,4 +1,4 @@
-package com.salman.myBlog.user.db
+package com.salman.myblog.user.db
 
 import com.fasterxml.jackson.annotation.JsonFormat
 import java.time.LocalDate

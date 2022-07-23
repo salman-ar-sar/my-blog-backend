@@ -1,9 +1,9 @@
-package com.salman.myBlog.user.controller
+package com.salman.myblog.user.controller
 
-import com.salman.myBlog.user.dto.UserDTO
-import com.salman.myBlog.user.dto.UserLoginDTO
-import com.salman.myBlog.user.dto.UserRequestDTO
-import com.salman.myBlog.user.service.UserService
+import com.salman.myblog.user.dto.UserDTO
+import com.salman.myblog.user.dto.UserLoginDTO
+import com.salman.myblog.user.dto.UserRequestDTO
+import com.salman.myblog.user.service.UserService
 import org.springframework.web.bind.annotation.*
 
 @RestController

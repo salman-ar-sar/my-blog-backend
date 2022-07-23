@@ -1,4 +1,4 @@
-package com.salman.myBlog.user.dto
+package com.salman.myblog.user.dto
 
 data class UserLoginDTO(
   var email: String,
