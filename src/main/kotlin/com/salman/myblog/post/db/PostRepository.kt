@@ -1,8 +1,8 @@
-package com.salman.myblog.post
+package com.salman.myblog.post.db
 
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface ArticleRepository : JpaRepository<PostEntity, Long> {
+interface PostRepository : JpaRepository<PostEntity, Long> {
 }

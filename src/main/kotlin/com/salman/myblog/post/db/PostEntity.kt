@@ -1,4 +1,4 @@
-package com.salman.myblog.post
+package com.salman.myblog.post.db
 
 import java.time.LocalDate
 import javax.persistence.*
@@ -14,7 +14,6 @@ data class PostEntity(
         strategy = GenerationType.SEQUENCE,
         generator = "post_sequence"
     ) var id: Long = 0L,
-    var name: String = "",
     var title: String = "",
     var author: String = "",
     @ElementCollection
@@ -23,7 +22,7 @@ data class PostEntity(
     var date: LocalDate = LocalDate.now()) {
 
     override fun toString(): String {
-        return "Post(name='$name', title='$title', author='$author', content='$content', date=$date, id=$id)"
+        return "Post(title='$title', author='$author', content='$content', date=$date, id=$id)"
     }
 
 }
